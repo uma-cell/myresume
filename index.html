@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Uma Avvaru Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+font-family:'Poppins',sans-serif;
+margin:0;
+background:#eef2f5;
+}
+
+.header{
+background:#173a4f;
+color:white;
+text-align:center;
+padding:35px;
+}
+
+.container{
+width:90%;
+margin:auto;
+margin-top:30px;
+}
+
+h2{
+color:#173a4f;
+border-bottom:2px solid #ddd;
+padding-bottom:6px;
+}
+
+.card{
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0px 3px 10px rgba(0,0,0,0.1);
+margin-bottom:25px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:25px;
+}
+
+a{
+color:blue;
+text-decoration:underline;
+}
+
+.center{
+text-align:center;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:10px;
+}
+
+table,th,td{
+border:1px solid #ccc;
+}
+
+th,td{
+padding:8px;
+text-align:center;
+}
+
+.skillbtn{
+background:#173a4f;
+color:white;
+border:none;
+padding:7px 16px;
+margin:6px;
+cursor:pointer;
+border-radius:6px;
+box-shadow:0px 3px 6px rgba(0,0,0,0.2);
+transition:0.3s;
+}
+
+.skillbtn:hover{
+background:#1f4d67;
+transform:translateY(-2px);
+}
+
+.skillrow{
+display:none;
+align-items:center;
+gap:10px;
+margin-top:6px;
+}
+
+.bar{
+height:6px;
+width:200px;
+background:#ddd;
+border-radius:10px;
+}
+
+.fill{
+height:6px;
+background:#173a4f;
+border-radius:10px;
+}
+
+.percent{
+font-size:12px;
+font-weight:600;
+color:#173a4f;
+}
+
+.projectbtn{
+background:#173a4f;
+color:white;
+border:none;
+padding:9px 18px;
+cursor:pointer;
+border-radius:6px;
+box-shadow:0px 4px 8px rgba(0,0,0,0.2);
+}
+
+.projectbtn:hover{
+background:#1f4d67;
+}
+
+#projects{
+display:none;
+margin-top:10px;
+}
+
+/*.squarelist{
+list-style-type:square;
+}*/
+.squarelist{
+list-style-type:square;
+display:inline-block;
+text-align:left;
+margin:auto;
+}
+.certcard{
+display:flex;
+flex-direction:column;
+justify-content:center;   /* vertical center */
+align-items:center;       /* horizontal center */
+min-height:250px;
+}
+
+.cert-gallery{
+display:flex;
+justify-content:center;
+gap:10px;
+margin-top:15px;
+flex-wrap:wrap;
+}
+
+.cert-gallery img{
+width:90px;
+height:60px;
+object-fit:cover;
+border-radius:6px;
+cursor:pointer;
+box-shadow:0px 3px 6px rgba(0,0,0,0.2);
+transition:0.3s;
+}
+
+.cert-gallery img:hover{
+transform:scale(1.1);
+}
+
+.modal{
+display:none;
+position:fixed;
+z-index:1000;
+left:0;
+top:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.8);
+justify-content:center;
+align-items:center;
+}
+
+.modal img{
+max-width:80%;
+max-height:80%;
+border-radius:8px;
+}
+
+.modal span{
+position:absolute;
+top:20px;
+right:30px;
+font-size:35px;
+color:white;
+cursor:pointer;
+}
+
+</style>
+
+<script>
+
+function showSkill(id){
+
+var row=document.getElementById(id);
+
+if(row.style.display==="flex"){
+row.style.display="none";
+}
+else{
+row.style.display="flex";
+}
+
+}
+
+function showProjects(){
+
+var p=document.getElementById("projects");
+
+if(p.style.display==="none" || p.style.display===""){
+p.style.display="block";
+}
+else{
+p.style.display="none";
+}
+
+}
+
+function openImg(src){
+document.getElementById("imgModal").style.display="flex";
+document.getElementById("modalImg").src=src;
+}
+
+function closeImg(){
+document.getElementById("imgModal").style.display="none";
+}
+
+</script>
+
+</head>
+
+<body>
+
+<div class="header">
+
+<h1>UMA AVVARU</h1>
+
+<p>
+📞 +91 9908941688 |
+📧 <a href="mailto:umaavvaru36@gmail.com" style="color:white;text-decoration:underline;">umaavvaru36@gmail.com</a>
+</p>
+
+<p>
+🛣️ AP, Tirupati District, Venkatagiri Mandal, Raja Veedi  – 524132
+</p>
+
+</div>
+
+<div class="container">
+
+<div class="card">
+
+<h2>OBJECTIVE ✅</h2>
+
+<p>
+To obtain a challenging position where I can apply my technical knowledge, enhance my problem solving abilities and continuously develop my professional skills while contributing to the growth and success of the organization.
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>PERSONAL PROFILE 👨‍👩‍👧‍👧</h2>
+
+<p>
+I am Avvaru Uma, born on 24-02-2007 in Venkatagiri, I come from a humble and hardworking family background. My parents,
+ <b>A. Narasimhulu</b> and <b>A. Bharathi</b>, are dedicated weavers whose efforts <b>inspire me to work hard and achieve my goals.</b> I have a younger sister, <b>A. Siri</b>, who is currently studying 7th class, and my family is my constant source of encouragement.
+ </p>
+
+</div>
+
+<div class="card">
+
+<h2>EXPERIENCE 🛄</h2>
+
+<p>
+During my academic journey I developed projects such as <b>RouteBuddy</b>, <b>AI Workflow Optimization Dashboard</b> and <b>Product Landing Page</b> using HTML, CSS and JavaScript. I also participated in the Build-Thon Hackathon where my team was shortlisted among the top teams from nearly 300 participants. This experience helped me improve teamwork, creativity and real world problem solving skills.
+</p>
+
+</div>
+
+<div class="grid">
+
+<div class="card">
+
+<h2>EDUCATION 🎓</h2>
+
+<table>
+
+<tr>
+<th>Qualification</th>
+<th>Institution</th>
+<th>Score</th>
+</tr>
+
+<tr>
+<td>B.Tech (CSE)-[2024-2028]</td>
+<td>Narayana Engineering College[Gudur]</td>
+<td>1-1 : 9.5% | 1-2 : 9.5% | 2-1 : 9.6%</td>
+</tr>
+
+<tr>
+<td>Intermediate-[2022-2024]</td>
+<td>SBN Junior College[Venkatagiri]</td>
+<td>90.7%</td>
+</tr>
+
+<tr>
+<td>SSC[2022]</td>
+<td>ZP Girls High School[Venkatagiri]</td>
+<td>83%</td>
+</tr>
+
+</table>
+
+</div>
+
+<div class="card center">
+
+<h2>CERTIFICATES 🎖️</h2>
+
+<ul class="squarelist">
+
+<li>Technogyan-2K25 Poster Presentation</li>
+<li>Women Forum Poster Presentation</li>
+<li>Elevate Webinar Participation</li>
+<li>Quantum Fundamentals Completion</li>
+<li>Build-Thon Hackathon Participation</li>
+</ul>
+
+<div class="cert-gallery">
+
+<img src="cert1.jpg" onclick="openImg(this.src)">
+<img src="cert2.jpg" onclick="openImg(this.src)">
+<img src="cert3.jpg" onclick="openImg(this.src)">
+<img src="cert4.jpg" onclick="openImg(this.src)">
+<img src="cert5.jpg" onclick="openImg(this.src)">
+
+</div>
+</div>
+
+</div>
+
+<div class="grid">
+
+<div class="card">
+
+<h2>ACHIEVEMENTS 🎯</h2>
+
+<ul>
+
+<li>1st Prize – Technogyan-2K25</li>
+<li>2nd Prize – Women Forum Poster Presentation</li>
+<li>Hackathon Shortlisted among 300 participants</li>
+
+</ul>
+
+<button class="projectbtn" onclick="showProjects()">View Projects</button>
+
+<div id="projects">
+
+<ul>
+
+<li><b>RouteBuddy</b> – Smart route finder web application [📍]</li>
+<li><b>AI Workflow Optimization Dashboard</b> [📈📊]</li>
+<li><b>Product Landing Page</b> – Responsive website [👚👖📱⌚]</li>
+
+</ul>
+
+</div>
+
+<!-- Button -->
+<button id="viewLinksBtn" class="projectbtn">View Links</button>
+
+<!-- Hidden div for project links -->
+<div id="projectLinks" style="display:none; margin-top:10px;">
+  <ul>
+    <li><a href="https://uma-cell.github.io/RouteBuddy" target="_blank">📍 https://uma-cell.github.io/RouteBuddy</a></li>
+    <li><a href="https://fashionu2026.netlify.app" target="_blank"> 👕 https://fashionu2026.netlify.app</a></li>
+  </ul>
+</div>
+
+<!-- JS to toggle display -->
+<script>
+document.getElementById("viewLinksBtn").addEventListener("click", () => {
+  const linksDiv = document.getElementById("projectLinks");
+  if (linksDiv.style.display === "none") {
+    linksDiv.style.display = "block";
+  } else {
+    linksDiv.style.display = "none";
+  }
+});
+</script>
+
+</div>
+
+<div class="card">
+
+<h2>TECHNICAL SKILLS 📶</h2>
+
+<button class="skillbtn" onclick="showSkill('html')">HTML</button>
+
+<div id="html" class="skillrow">
+<div class="bar">
+<div class="fill" style="width:95%"></div>
+</div>
+<span class="percent">95%</span>
+</div>
+
+<button class="skillbtn" onclick="showSkill('css')">CSS</button>
+
+<div id="css" class="skillrow">
+<div class="bar">
+<div class="fill" style="width:80%"></div>
+</div>
+<span class="percent">80%</span>
+</div>
+
+<button class="skillbtn" onclick="showSkill('js')">JavaScript</button>
+
+<div id="js" class="skillrow">
+<div class="bar">
+<div class="fill" style="width:76%"></div>
+</div>
+<span class="percent">76%</span>
+</div>
+
+<ul>
+<li>Python – Object Oriented Programming (OOP) Concepts</li>
+<li>C Programming – Programming Logic & Problem Solving</li>
+<li>Java – Core Programming Knowledge</li>
+<li>PHP – Web Development Knowledge</li>
+<li>Frontend Development – HTML, CSS, JavaScript</li>
+<li>Web Application Development</li>
+<li>User Interface (UI) Design</li>
+</ul>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>ONLINE PROFILES 🔗</h2>
+
+<ul>
+
+<li>
+GitHub :
+<a href="https://github.com/uma-cell" target="_blank">
+github.com/uma-cell
+</a>
+</li>
+
+<li>
+LinkedIn :
+<a href="https://linkedin.com/in/uma-avvaru-5472a5351" target="_blank">
+ linkedin.com/in/uma-avvaru
+</a>
+</li>
+
+</ul>
+
+<h2>SOFT SKILLS</h2>
+
+<ul>
+<li>Communication</li>
+<li>Teamwork</li>
+<li>Problem Solving</li>
+<li>Quick Learning</li>
+<li>Presentation Skills</li>
+</ul>
+
+<h2>LANGUAGES KNOWN 🌍</h2>
+
+<ul>
+<li>English</li>
+<li>Telugu</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="imgModal" class="modal">
+<span onclick="closeImg()">&times;</span>
+<img id="modalImg">
+</div>
+
+</body>
+</html>
